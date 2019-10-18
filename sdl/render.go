@@ -442,6 +442,20 @@ func (texture *Texture) Update(rect *Rect, pixels []byte, pitch int) error {
 			C.int(pitch))))
 }
 
+// Update updates the given texture rectangle with new pixel data.
+// (https://wiki.libsdl.org/SDL_UpdateTexture)
+func (texture *Texture) Updates(rect *Rect, pixels unsafe.Pointer, pitch int) error {
+	if pixels == nil {
+		return nil
+	}
+	return errorFromInt(int(
+		C.SDL_UpdateTexture(
+			texture.cptr(),
+			rect.cptr(),
+			pixels,
+			C.int(pitch))))
+}
+
 // UpdateRGBA updates the given texture rectangle with new uint32 pixel data.
 // (https://wiki.libsdl.org/SDL_UpdateTexture)
 func (texture *Texture) UpdateRGBA(rect *Rect, pixels []uint32, pitch int) error {
