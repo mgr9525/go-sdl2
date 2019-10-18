@@ -3,7 +3,7 @@ package img
 import (
 	"testing"
 
-	"github.com/veandco/go-sdl2/sdl"
+	"github.com/mgr9525/go-sdl2/sdl"
 )
 
 var testBMP = []byte("BM\x96\x00\x00\x00\x00\x00\x00\x00\x92\x00\x00\x00|" +

@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/veandco/go-sdl2/sdl"
+	"github.com/mgr9525/go-sdl2/sdl"
 )
 
 var characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ `!@#$%^&*()-=~_+[]\\{}|;':\",./<>?"
